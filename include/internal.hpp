@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-namespace internal
+namespace gitualizer
 {
     struct FileInfo //Структа содержащая информацию о конкретном файле
     {
