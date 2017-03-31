@@ -1,5 +1,5 @@
-#ifndef INTERNAL_HPP
-#define INTERNAL_HPP
+#ifndef MODIFICATION_MANAGER_HPP
+#define MODIFICATION_MANAGER_HPP
 
 #include <stdint.h>
 
@@ -14,25 +14,6 @@ namespace gitualizer
         char        _status;    //Статус файла 1 - добавлен, 2 - изменен, 4 - удален
     };
 
-    struct DirectoryInfo //Структура содержащая информацию о конкретной директории
-    {
-        char*           _dirname;       //Имя директории в строковом виде
-        DirectoryInfo*  _dirsInfo;      //Массив указателей на дочерние дириктории
-        FileInfo*       _filesInfo;     //Массив указателей на файлы содержащиеся в каталоги
-        int32_t         _level;         //уровень дириктории от -1 (/)
-        uint32_t        _ID;            //ID на уровне
-        uint32_t        _countDirs;     //количество дочерних директорий и их ID
-        uint32_t        _countFiles;    //Количество фалов в дириктории
-    };
-
-    struct StateTree //Структура вершины древа состояния
-    {
-        StateTree*      _child;         //Массив указателей на дочерние вершины дерева
-        uint32_t*       _filesID;       //Массив ID файлов в вершине
-        uint32_t        _countDirs;     //Количество дочерних вершин
-        uint32_t        _countFiles;    //Количество файлов в вершине
-    };
-
     struct Modification //Структура определяющая модификацию
     {
         char*       _author;        //Имя автора модификации
@@ -45,7 +26,18 @@ namespace gitualizer
     class ModificationManager
     {
     private:
+        struct DirectoryInfo //Структура содержащая информацию о конкретной директории
+        {
+            char*           _dirname;       //Имя директории в строковом виде
+            DirectoryInfo*  _dirsInfo;      //Массив указателей на дочерние дириктории
+            FileInfo*       _filesInfo;     //Массив указателей на файлы содержащиеся в каталоги
+            int32_t         _level;         //уровень дириктории от -1 (/)
+            uint32_t        _ID;            //ID на уровне
+            uint32_t        _countDirs;     //количество дочерних директорий и их ID
+            uint32_t        _countFiles;    //Количество фалов в дириктории
+        };
         DirectoryInfo*  _dirsInfo;  //Массив указателей на директории
+        
     public:
         Modification* GetInitialState();            //Метод получающий начальное состояние репозитория
         Modification* GetNextModification();        //Метод получающий последующие изменения состояния репозитория
@@ -54,4 +46,4 @@ namespace gitualizer
     };
 }
 
-#endif // INTERNAL_HPP
+#endif // MODIFICATION_MANAGER_HPP
