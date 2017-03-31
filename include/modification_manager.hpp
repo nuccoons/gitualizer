@@ -41,6 +41,7 @@ namespace gitualizer
     public:
         Modification* GetInitialState();            //Метод получающий начальное состояние репозитория
         Modification* GetNextModification();        //Метод получающий последующие изменения состояния репозитория
+        Modification* GetFileInfoById(uint32_t id);
         int SaveToFile(const char* filename);       //Метод сохраняющий структуры Modification в файл...
         int LoadFromFile(const char* filename);     //...и метод их загружающий из файла
     };
