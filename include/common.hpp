@@ -1,6 +1,10 @@
 #ifndef COMMON_HPP
 #define COMMON_HPP
 
+const char added    = 1;
+const char modified = 2;
+const char removed  = 4;
+
 namespace gitualizer
 {
     struct FileInfo //Структа содержащая информацию о конкретном файле
