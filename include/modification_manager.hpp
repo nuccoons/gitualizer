@@ -1,7 +1,7 @@
 #ifndef MODIFICATION_MANAGER_HPP
 #define MODIFICATION_MANAGER_HPP
 
-#include <stdint.h>
+#include <cstdint>
 #include <common.hpp>
 
 namespace gitualizer
