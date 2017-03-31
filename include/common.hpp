@@ -1,9 +1,11 @@
 #ifndef COMMON_HPP
 #define COMMON_HPP
 
-const char added    = 1;
-const char modified = 2;
-const char removed  = 4;
+#include <stdint.h>
+
+const char ADDED    = 1;
+const char MODIFIED = 2;
+const char REMOVED  = 4;
 
 namespace gitualizer
 {
