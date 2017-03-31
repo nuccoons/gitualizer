@@ -2,7 +2,7 @@
 #define MODIFICATION_MANAGER_HPP
 
 #include <stdint.h>
-#include <modfileinfo.hpp>
+#include <common.hpp>
 
 namespace gitualizer
 {
