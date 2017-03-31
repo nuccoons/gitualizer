@@ -1,7 +1,7 @@
 #ifndef COMMON_HPP
 #define COMMON_HPP
 
-#include <stdint.h>
+#include <cstdint>
 
 const char ADDED    = 1;
 const char MODIFIED = 2;
