@@ -10,7 +10,7 @@ namespace gitualizer
 	{
 		struct StateTree //Структура вершины древа состояния
 		{
-			StateTree*	_childDirs;			//Массив указателей на дочерние вершины дерева
+			StateTree*	_subDirs;			//Массив указателей на дочерние вершины дерева
 			uint32_t*	_IDs;			//Массив ID файлов в вершине
 			uint32_t	_countDirs;		//Количество дочерних вершин
 			uint32_t	_countFiles;	//Количество файлов в вершине
@@ -22,7 +22,7 @@ namespace gitualizer
 			struct DirectoryInfo //Структура содержащая информацию о конкретной директории
 			{
 				char*			_dirname;		//Имя директории в строковом виде
-				uint32_t*		_subdirsIds;		//Массив указателей на дочерние дириктории
+				uint32_t*		_subDirsIds;		//Массив указателей на дочерние дириктории
 				FileInfo*		_filesInfo;		//Массив указателей на файлы содержащиеся в каталоги
 				int32_t			_level;			//уровень дириктории от -1 (/)
 				uint32_t		_ID;			//ID на уровне
