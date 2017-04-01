@@ -10,8 +10,8 @@ namespace gitualizer
 	{
 		struct StateTree //Структура вершины древа состояния
 		{
-			StateTree*	_child;			//Массив указателей на дочерние вершины дерева
-			uint32_t*	_ID;			//Массив ID файлов в вершине
+			StateTree*	_childDirs;			//Массив указателей на дочерние вершины дерева
+			uint32_t*	_IDs;			//Массив ID файлов в вершине
 			uint32_t	_countDirs;		//Количество дочерних вершин
 			uint32_t	_countFiles;	//Количество файлов в вершине
 		};
