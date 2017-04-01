@@ -14,7 +14,7 @@ namespace gitualizer
 			uint32_t*	_ID;			//Массив ID файлов в вершине
 			uint32_t	_countDirs;		//Количество дочерних вершин
 			uint32_t	_countFiles;	//Количество файлов в вершине
-        };
+		};
 
 		class StateManager
 		{
