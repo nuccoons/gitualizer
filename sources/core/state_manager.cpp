@@ -1,4 +1,4 @@
-#include "state_manager.hpp"
+#include <core/state_manager.hpp>
 
 namespace gitualizer
 {
