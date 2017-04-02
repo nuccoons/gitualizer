@@ -2,28 +2,28 @@
 
 namespace gitualizer
 {
-	/*gitualizer::*/Gitualizer::Gitualizer()
+	Gitualizer::Gitualizer()
 	{
 		_user = std::string();
 		_repo = std::string();
 	}
 
 
-	/*gitualizer::*/Gitualizer::~Gitualizer()
+	Gitualizer::~Gitualizer()
 	{
 		_user.clear();
 		_repo.clear();
 	}
 
 
-	/*gitualizer::*/Gitualizer::Gitualizer(const std::string& user, const std::string& repo)
+	Gitualizer::Gitualizer(const std::string& user, const std::string& repo)
 	{
 		_user = user;
 		_repo = repo;
 	}
 
 
-	int /*gitualizer::*/Gitualizer::SetUser(const std::string& user)
+	int Gitualizer::SetUser(const std::string& user)
 	{
 		_user = user;
 
@@ -31,7 +31,7 @@ namespace gitualizer
 	}
 
 
-	int /*gitualizer::*/Gitualizer::SetRepository(const std::string& repo)
+	int Gitualizer::SetRepository(const std::string& repo)
 	{
 		_repo = repo;
 
@@ -39,43 +39,43 @@ namespace gitualizer
 	}
 
 
-	int /*gitualizer::*/Gitualizer::Play()
+	int Gitualizer::Play()
 	{
 		return 0;
 	}
 
 
-	int /*gitualizer::*/Gitualizer::Pause()
+	int Gitualizer::Pause()
 	{
 		return 0;
 	}
 
 
-	int /*gitualizer::*/Gitualizer::Stop()
+	int Gitualizer::Stop()
 	{
 		return 0;
 	}
 
 
-	int /*gitualizer::*/Gitualizer::Save(const std::string& filename)
+	int Gitualizer::Save(const std::string& filename)
 	{
 		return 0;
 	}
 
 
-	int /*gitualizer::*/Gitualizer::Load(const std::string& filename)
+	int Gitualizer::Load(const std::string& filename)
 	{
 		return 0;
 	}
 
 
-	int /*gitualizer::*/Gitualizer::Settings()
+	int Gitualizer::Settings()
 	{
 		return 0;
 	}
 
 
-	int /*gitualizer::*/Gitualizer::Exit()
+	int Gitualizer::Exit()
 	{
 		return 0;
 	}
