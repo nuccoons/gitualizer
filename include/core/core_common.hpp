@@ -15,6 +15,12 @@ namespace gitualizer
 			uint32_t	_ID;		//ID файла
 			FileStatus	_status;	//Статус файла 1 - добавлен, 2 - изменен, 4 - удален
 		};
+
+		class Manager
+		{
+		public:
+			ModificationResponse GetModifications(uint32_t count);
+		};
 	}
 }
 
