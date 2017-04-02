@@ -1,7 +1,6 @@
 #ifndef STATE_MANAGER_HPP
 #define STATE_MANAGER_HPP
 
-#include <cstdint>
 #include "core_common.hpp"
 
 namespace gitualizer

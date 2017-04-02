@@ -19,7 +19,7 @@ namespace gitualizer
 		class Manager
 		{
 		public:
-			ModificationResponse GetModifications(uint32_t count);
+			ModificationResponse GetModifications(uint32_t count) { return ModificationResponse(); }
 		};
 	}
 }
