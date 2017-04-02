@@ -26,6 +26,12 @@ namespace gitualizer
 		File*		_files;			//Массив указателей на файлы в модификации
 		uint32_t	_countFiles;	//Количество файлов в модификации
 	};
+
+	struct ModificationResponse
+	{
+		Modification* _mods;
+		uint32_t _count;
+	};
 }
 
 #endif // COMMON_HPP
