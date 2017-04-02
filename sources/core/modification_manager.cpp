@@ -4,8 +4,8 @@ namespace gitualizer
 {
 	namespace core
 	{
-		const uint32_t EDGE_LEVEL = 10; // Граница
-		const uint32_t CASHING_COUNT = 100; // Кол-во запр. модиф.
+		const uint32_t EDGE_LEVEL = 10; // Р“СЂР°РЅРёС†Р°
+		const uint32_t CASHING_COUNT = 100; // РљРѕР»-РІРѕ Р·Р°РїСЂ. РјРѕРґРёС„.
 
 		const Modification* const ModificationManager::GetNextModification()
 		{
