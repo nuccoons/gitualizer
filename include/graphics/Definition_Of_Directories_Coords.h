@@ -16,9 +16,9 @@ Vertex* Definition_Of_Files_Coord(uint32_t count, Vertex center)
 {
 	uint32_t	border1 = 3, border2 = 5, border3 = 7,
 		borderShift = 10,
-		initialValue = 0.1,
+		initialValue = 1,
 		sizeSquare = 3;
-	const uint32_t shiftCoord = 1;
+	const uint32_t shiftCoord = 0.1;
 
 	while (count > sizeSquare*sizeSquare - 1)
 	{
@@ -76,57 +76,25 @@ Vertex* Definition_Of_Files_Coord(uint32_t count, Vertex center)
 	return files;
 }
 
-float		X = 0.0,
-			Y = 0.0,
-			Z = 0.0;
-uint32_t	counter = 0,
-			border1 = 3,	
-			border2 = 5, 
-			border3 = 7,
-			borderShift = 10, 
-			j = 3;
+float			Z0 = 0.0,
+			R = 1000.0,
+			PI = 3.14159, 
+			X0 = 0,
+			Y0 = 0;
+
 
 void Definition_of_directories_coords(Graph tree)
 {
-	
-	tree._own._x = X;
-	tree._own._y = Y;
-	tree._own._z = Z;
+	float angle = 0.0, step = 0.0;
+	step = 2 * PI / tree.countDirs;
+	tree._own._x = X0 + R*sin(angle);
+	tree._own._y = Y0 + R*cos(angle);
+	tree._own._z = Z0;
 	Definition_Of_Files_Coord(tree.countFiles, tree._own);
-	++counter;
-	if (counter == 1)
-	{
-		++X;
-		++Y;
-	}
-	if (counter > 1 && counter < border1)
-	{
-		--X;
-	}
-	if (counter > border1 - 1 && counter < border2)
-	{
-		--Y;
-	}
-
-	if (counter > border2 - 1 && counter < border3)
-	{
-		++X;
-	}
-
-	if (counter > border3 - 1 && counter < j*j - 1)
-	{
-		++Y;
-	}
-	if (counter == j*j - 2)
-	{
-		++X;
-		++Y;
-		border1 += borderShift;
-		border2 += borderShift + 2;
-		border3 += borderShift + 4;
-		borderShift += 8;
-		j += 2;
-	}
+	angle += step;
+	R -= 50;
+	X0 = tree._own._x;
+	Y0 = tree._own._y;
 
 	for (uint32_t i = 0; i < tree.countDirs; ++i)
 	{
